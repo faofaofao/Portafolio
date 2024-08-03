@@ -1,7 +1,8 @@
 // client/components/Contact.js
 import { useState } from 'react';
 import axios from 'axios';
-import verifyEmail from './utils/api';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +24,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://portafolio-d16c.onrender.com', formData);
+      const response = await axios.post(`${apiUrl}`, formData);
       console.log(response.data);
       // Reset form and error message
       setFormData({
@@ -96,5 +97,7 @@ const Contact = () => {
     </section>
   );
 };
+
+
 
 export default Contact;
