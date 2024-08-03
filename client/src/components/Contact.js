@@ -1,7 +1,7 @@
 // client/components/Contact.js
 import { useState } from 'react';
 import axios from 'axios';
-
+import verifyEmail from './utils/api';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',

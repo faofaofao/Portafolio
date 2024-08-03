@@ -24,3 +24,5 @@ export const verifyEmail = async (email) => {
     throw error;
   }
 };
+
+export default verifyEmail;
