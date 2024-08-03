@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "client/next.config.js",
+        "use": "@vercel/next"
+      },
+      {
+        "src": "server/pages/api/contact.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "server/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/contact",
+        "dest": "server/pages/api/contact.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "client/$1"
+      }
+    ]
+  }
+  
