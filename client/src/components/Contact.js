@@ -23,7 +23,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://your-backend-url.vercel.app/api/contact', formData);
+      const response = await axios.post('https://portafolio-d16c.onrender.com', formData);
       console.log(response.data);
       // Reset form and error message
       setFormData({
