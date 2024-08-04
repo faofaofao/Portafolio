@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 // Rutas
-app.use('./pages/api/contact', require('./routes/contact')); // Asegúrate de que la ruta sea correcta
+app.use('api/contact', require('./routes/contact')); // Asegúrate de que la ruta sea correcta
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
