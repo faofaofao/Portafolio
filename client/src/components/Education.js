@@ -13,13 +13,13 @@ const Education = () => (
             <img src="/images/udemy_logo.png" alt="Institución" className="h-50 w-full object-cover mb-4 rounded-md"/>
             <h3 className="text-xl font-bold mb-2">JavaScript & NODEJS - 
             Udemy</h3>
-            <p className="text-gray-700">03-2023 - 07-2023</p>
+            <p className="text-gray-700">02-2023 - 05-2023</p>
           </div>
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
             <img src="/images/desafioLatam_logo.png" alt="Institución" className="h-50 w-full object-cover mb-4 rounded-md"/>
             <h3 className="text-xl font-bold mb-2">JavaScript FullStack - 
             Desafio Latam</h3>
-            <p className="text-gray-700">03-2023 - 07-2023</p>
+            <p className="text-gray-700">05-2023 - 09-2023</p>
           </div>
           {/* Repite estas cartas según sea necesario */}
         </div>

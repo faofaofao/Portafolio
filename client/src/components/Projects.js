@@ -35,7 +35,7 @@ const Projects = () => (
           
           </div>
           <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-            <img src="/images/proyectoRestauranteAPP_icon.png" alt="Proyecto" className="h-50 w-full object-cover mb-4 rounded-md"/>
+            <img src="/images/proyectoRestauranteApp_icon.png" alt="Proyecto" className="h-50 w-full object-cover mb-4 rounded-md"/>
             <h3 className="text-xl font-bold mb-2">RestauranteAPP</h3>
             <p className="text-gray-700 mb-4">HTML-CSS-TAILWIND-JS-NODEJS-EXPRESSJS-REACT-VITE-FIREBASE</p>
             <div className="flex justify-between">
