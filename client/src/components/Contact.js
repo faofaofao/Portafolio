@@ -1,7 +1,10 @@
 // client/components/Contact.js
 import { useState } from 'react';
 import axios from 'axios';
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const UrlApi = process.env.BACK_API_URL
+
+
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,10 +26,11 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      console.log("APIURL", apiUrl)
-      const response = await axios.post(`${apiUrl}/api/contact`, formData);
+      const response = await axios.post(`https://portafolio-back-p2nb.onrender.com/api/contact`, formData);
       console.log(response.data);
+
       // Reset form and error message
       setFormData({
         name: '',
@@ -36,8 +40,9 @@ const Contact = () => {
       });
       setErrorMessage('');
     } catch (error) {
+     
       console.error('Error al enviar el formulario:', error);
-      setErrorMessage('El correo no existe');
+      setErrorMessage('Error en el envío del formulario');
     }
   };
 

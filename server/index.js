@@ -6,29 +6,24 @@ require('dotenv').config();
 const app = express();
 
 // Conectar a la base de datos
-connectDB();
-
+connectDB().then(() => {
+  console.log('Conexión a la base de datos exitosa');
+}).catch(err => {
+  console.error('Error al conectar a la base de datos:', err);
+});
 // Middleware
 app.use(express.json());
 
 // Configuración de CORS
-const allowedOrigins = [process.env.FRONTEND_URL];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST'],
-  credentials: true,
-}));
+app.use(cors());
+
+
+
 
 // Health check endpoint
 app.get('/healthcheck', (req, res) => {
-  res.status(200).json({ status: 'OK' });
+  res.status(200).send('ok');
 });
 
 // Rutas
